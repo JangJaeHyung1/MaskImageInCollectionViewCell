@@ -55,7 +55,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NetworkCollectionViewCell
         cell.nicknameLbl.text = "Hello \(indexPath.row)"
         cell.imageView.image = UIImage(named: "photo_1641344921")!
-        cell.backgroundColor = .brown
+        cell.backgroundColor = .systemGray3
         return cell
     }
     

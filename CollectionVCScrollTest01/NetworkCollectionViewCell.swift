@@ -13,7 +13,6 @@ class NetworkCollectionViewCell: UICollectionViewCell {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.contentMode = .scaleAspectFit
-        img.backgroundColor = .darkGray
         return img
     }()
     
@@ -64,7 +63,7 @@ class NetworkCollectionViewCell: UICollectionViewCell {
     }
     
     private func maskImage(){
-        maskImageView.frame = imageView.frame
+        maskImageView.frame = CGRect(x: 0, y: 0, width: imageView.bounds.width, height: imageView.bounds.height)
         imageView.mask = maskImageView
     }
 }
