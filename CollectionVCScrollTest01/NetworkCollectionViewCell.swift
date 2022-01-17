@@ -54,7 +54,7 @@ class NetworkCollectionViewCell: UICollectionViewCell {
         addSubview(nicknameLbl)
         addSubview(imageView)
         
-        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         imageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6).isActive = true
         imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
         imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
@@ -64,8 +64,7 @@ class NetworkCollectionViewCell: UICollectionViewCell {
     }
     
     private func maskImage(){
-        maskImageView.frame = CGRect(x: 0, y: 0, width: imageView.bounds.width, height: imageView.bounds.height)
-        imageView.frame = CGRect(x: 0, y: 0, width: imageView.bounds.width, height: imageView.bounds.height)
+        maskImageView.frame = imageView.frame
         imageView.mask = maskImageView
     }
 }
